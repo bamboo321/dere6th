@@ -37,7 +37,29 @@ def main():
     #ボタンをクリック
     day1nextbutton.click()
 
+    #全席指定取得
+    day1zenseki = driver.find_element_by_xpath('//*[@id="bw1002"]/div[2]/table/tbody/tr[2]/td[1]').text
+
+    #立ち見取得
+    day1tatimi = driver.find_element_by_xpath('//*[@id="bw1002"]/div[2]/table/tbody/tr[2]/td[2]').text
+
+    #芝生指定取得
+    day1shibahu = driver.find_element_by_xpath('//*[@id="bw1002"]/div[2]/table/tbody/tr[2]/td[3]').text
+
+    #見切れ取得
+    day1mikire = driver.find_element_by_xpath('//*[@id="bw1002"]/div[2]/table/tbody/tr[2]/td[3]').text
+
+    print(day1zenseki)
+    print(day1tatimi)
+    print(day1shibahu)
+    print(day1mikire)
+
     #前のページに戻る
+    day1backbutton = driver.find_element_by_xpath('//*[@id="bw1002"]/div[6]/a')
+
+    #ボタンをクリック
+    day1backbutton.click()
+
     
 
 
